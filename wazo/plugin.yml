@@ -1,0 +1,9 @@
+name: wazo-auth-service-email
+namespace: sboily
+version: 0.0.1
+author: Sylvain Boily
+display_name: Email service
+min_wazo_version: 24.08
+tags:
+  - experimental
+homepage: https://github.com/sboily/wazo-auth-email-notification

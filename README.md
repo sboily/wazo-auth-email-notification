@@ -1,0 +1,1 @@
+# wazo-auth-email-notification

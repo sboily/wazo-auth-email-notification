@@ -1,0 +1,27 @@
+#!/bin/sh
+# Copyright 2024 Wazo Team (see the AUTHORS file)
+# SPDX-License-Identifier: GPL-3.0+
+
+case "$1" in
+    build)
+        python3 setup.py bdist
+        ;;
+
+    package)
+        tar xvf dist/wazo-email-notification-*.tar.gz -C ${pkgdir}
+        cp -R etc ${pkgdir}/
+        ;;
+
+    install)
+        systemctl restart wazo-auth
+        ;;
+
+    uninstall)
+        systemctl restart wazo-auth
+        ;;
+
+    *)
+        echo "$0 called with unknown argument '$1'" >&2
+        exit 1
+    ;;
+esac
