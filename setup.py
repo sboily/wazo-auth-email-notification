@@ -19,7 +19,7 @@ setup(
     packages=find_packages(),
     entry_points={
         'wazo_auth.services': [
-            'email_notification = wazo_email_notification.plugin:EmailService'
+            'email_notification_sylvain = wazo_email_notification.plugin:EmailService'
         ],
     },
 )

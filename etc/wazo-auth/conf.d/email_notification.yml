@@ -1,0 +1,3 @@
+enabled_service_plugins:
+  email_notification_sylvain: true
+email_notification_module: email_notification_sylvain

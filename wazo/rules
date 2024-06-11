@@ -9,6 +9,7 @@ case "$1" in
 
     package)
         tar xvf dist/wazo-auth-service-email-*.tar.gz -C ${pkgdir}
+        cp -R etc ${pkgdir}/
         ;;
 
     install)
