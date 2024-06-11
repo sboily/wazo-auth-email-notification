@@ -5,9 +5,15 @@ from wazo_auth.services.helpers import BaseService
 
 
 class EmailService(BaseService):
+    def __init__(self):
+        self.dao = None
+        self.tenant_uuid = None
+
     def load(self, dependencies):
         dao = dependencies['dao']
         tenant_uuid = dependencies['tenant_uuid']
+        template_formatter = dependencies['template_formatter']
+        config = dependencies['config']
 
         super().__init__(dao, tenant_uuid)
 
