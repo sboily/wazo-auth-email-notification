@@ -21,9 +21,9 @@ class EmailService(BaseService):
         print(f'Email confirm: {email_uuid}')
 
     def send_confirmation_email(
-        self, username, email_uuid, email_address, connection_params
+        self, username, email_uuid, email_address, connection_params=None
     ):
         print(f'Send email confirmation to {email_address}')
 
-    def send_reset_email(self, user_uuid, username, email_address, connection_params):
+    def send_reset_email(self, user_uuid, username, email_address, connection_params=None):
         print(f'Send email reset to {email_address}')
